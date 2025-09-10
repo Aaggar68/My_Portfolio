@@ -49,21 +49,21 @@ export default function AboutSection() {
       </div>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <h2 className="font-bold text-center mb-16 text-6xl" style={{ color: "#ffffff" }}>
-          About Me
+        Maker. Mentor. Mess-up Expert
         </h2>
         <div className="grid lg:grid-cols-2 gap-20 items-start">
-          <div className="space-y-10">
-            <div className="space-y-10">
-                <p className="leading-relaxed text-3xl font-bold" style={{ color: "#ffffff" }}>
-                  Hi — I'm Anurag. Curious maker, coffee-lover, and someone who prefers figuring things out with my hands (and a little chaos).
+          <div className="space-y-16">
+            <div className="space-y-16">
+                <p className="leading-relaxed text-4xl font-bold" style={{ color: "#ffffff" }}>
+                Hi — I’m Anurag: a hands-on Mechatronics + AI student who turns messy sketches into soldered circuits, prototype chaos, and repeatable demos.
                 </p>
                 
-                <p className="leading-relaxed text-2xl" style={{ color: "#f1f5f9" }}>
-                  I'm a Mechatronics + AI student at Western, but I'm really just someone who loves learning by doing. I get a kick out of taking a messy idea, sketching it, and iterating until it actually works — and I love pulling others into that process. I run beginner-friendly workshops, help friends debug projects, and collect small wins (and bigger flops) with the same enthusiasm.
+                <p className="leading-relaxed text-3xl" style={{ color: "#f1f5f9" }}>
+                I get a kick from forcing messy sketches into reality — CAD, solder, code, repeat — usually fueled by coffee and stubborn curiosity. Hunting down elusive bugs, shaving latency, and shipping demos that actually work are what get me out of bed. If it’s practical, weird, or stubborn, I’ll make it work (and celebrate the victory — or hilarious failure).
                 </p>
                 
-                <p className="leading-relaxed text-2xl" style={{ color: "#f1f5f9" }}>
-                  Outside the lab I'm the kind of person who values good routines — a bit of exercise, decent sleep, and time for coffee and conversation — because that's what keeps me curious and patient. If you've got a weird idea, want to trade failure stories, or just want a coffee chat, I'm always up for it. ☕️
+                <p className="leading-relaxed text-3xl" style={{ color: "#f1f5f9" }}>
+                  Got a weird idea or want to trade failure stories over coffee? I'm in.
                 </p>
             </div>
           </div>

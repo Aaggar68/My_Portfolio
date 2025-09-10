@@ -73,13 +73,11 @@ export default function SkillsSection() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-16">
-          <p className="text-white text-base font-semibold tracking-wider uppercase mb-2">TECHNICAL EXPERTISE</p>
           <h2 className="font-bold text-6xl mb-6" style={{ color: "#ffffff" }}>
-            Engineering Skills
+            Wiring & Wisdom
           </h2>
-          <p className="text-lg leading-relaxed max-w-3xl mx-auto" style={{ color: "#1e293b" }}>
-            Comprehensive expertise in embedded systems, robotics, and intelligent control systems with hands-on
-            experience in building autonomous systems and deploying edge AI solutions.
+          <p className="text-xl leading-relaxed max-w-4xl mx-auto" style={{ color: "#f1f5f9" }}>
+            Hardware know-how + software smarts — what I use to turn sketches into things that move, see, and think.
           </p>
         </div>
 
@@ -91,23 +89,26 @@ export default function SkillsSection() {
             {certifications.map((cert, index) => (
               <div
                 key={index}
-                className="p-6 rounded-xl transition-all duration-300 hover:scale-105 hover:shadow-2xl"
+                className="relative h-48 rounded-xl transition-all duration-300 hover:scale-105 hover:shadow-2xl overflow-hidden group cursor-pointer"
                 style={{
-                  background: "rgba(0, 0, 0, 0.4)",
-                  backdropFilter: "blur(10px)",
-                  border: "1px solid rgba(255, 255, 255, 0.1)",
+                  backgroundImage: `url(${cert.thumbnail || "/placeholder.svg"})`,
+                  backgroundSize: "cover",
+                  backgroundPosition: "center",
+                  backgroundRepeat: "no-repeat",
                 }}
               >
-                <div className="flex flex-col items-center space-y-4 text-center">
-                  <img
-                    src={cert.thumbnail || "/placeholder.svg"}
-                    alt={`${cert.name} certificate`}
-                    className="w-20 h-20 rounded-xl object-cover shadow-lg"
-                  />
-                  <span className="text-base font-semibold leading-relaxed" style={{ color: "#ffffff" }}>
+                {/* Dark overlay for better text readability */}
+                <div className="absolute inset-0 bg-black/60 group-hover:bg-black/40 transition-all duration-300"></div>
+                
+                {/* Text overlay */}
+                <div className="absolute inset-0 flex items-center justify-center p-4">
+                  <span className="text-base font-semibold leading-relaxed text-center text-white drop-shadow-lg">
                     {cert.name}
                   </span>
                 </div>
+                
+                {/* Hover effect border */}
+                <div className="absolute inset-0 border-2 border-transparent group-hover:border-cyan-400/50 rounded-xl transition-all duration-300"></div>
               </div>
             ))}
           </div>

@@ -87,9 +87,12 @@ export default function ProjectsSection() {
         <div className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-pink-400 to-transparent animate-pulse"></div>
       </div>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="font-bold text-center mb-8 text-5xl" style={{ color: "#ffffff" }}>
-          Projects
+        <h2 className="font-bold text-center mb-6 text-6xl" style={{ color: "#ffffff" }}>
+          Projects & Pandemonium
         </h2>
+        <p className="text-center mb-12 text-xl leading-relaxed max-w-4xl mx-auto" style={{ color: "#f1f5f9" }}>
+          A messy mix of prototypes, hacks, and demos — code, videos, and the glorious failures that taught me the most.
+        </p>
         <div className="grid sm:grid-cols-1 lg:grid-cols-2 gap-12 justify-items-center">
           {projects.map((project, index) => (
             <div

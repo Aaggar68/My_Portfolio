@@ -13,8 +13,8 @@ export default function ExperienceSection() {
       description:
         "Deployed a real-time vision inspection and monitoring system on the production line to catch surface defects early and streamline post-cast handling.",
       timelineDescription: [
-        "Reduced manual inspection time by ~33% and improved early defect detection by deploying a real-time vision system on the production line.",
-        "Engineered end-to-end systems: KiCad PCBs, STM32 RTOS firmware, Jetson-accelerated vision (PyTorch/TensorRT), MQTT telemetry, and ROS-enabled pick-and-place integration."
+        "Led rollout of a real-time automated inspection & monitoring system on the production line that replaced manual checks, caught subtle surface defects earlier, and reduced rework through proactive thermal-anomaly alerts.",
+        "Built the end-to-end hardware + software stack: Jetson Nano + GigE vision (PyTorch/OpenCV), STM32 DAQ → MQTT → InfluxDB/Grafana, KiCad PCB with C/C++ FreeRTOS firmware, and ROS-enabled pick-and-place integration."
       ]
     },
     {
@@ -99,9 +99,12 @@ export default function ExperienceSection() {
         <div className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-pink-400 to-transparent animate-pulse"></div>
       </div>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="font-bold text-center mb-8 text-6xl" style={{ color: "#ffffff" }}>
-          Experience
+        <h2 className="font-bold text-center mb-6 text-6xl" style={{ color: "#ffffff" }}>
+          Roles & Impact — What I built and why it mattered.
         </h2>
+        <p className="text-center mb-12 text-xl leading-relaxed max-w-4xl mx-auto" style={{ color: "#f1f5f9" }}>
+          Real projects — from prototype to demo — that solved real problems, saved time, and taught me how to build smarter.
+        </p>
 
         <div className="text-center mb-12">
           <button
