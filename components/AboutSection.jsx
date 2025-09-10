@@ -110,40 +110,15 @@ export default function AboutSection() {
                 />
               </div>
               
-              {/* Medium accent image - bottom right */}
-              <div className="absolute bottom-0 right-0 w-2/5 h-1/3 rounded-2xl overflow-hidden shadow-2xl hover:shadow-3xl transition-all duration-500 hover:scale-105 hover:rotate-2 z-40 hover:z-50 group">
-                <div className="absolute inset-0 bg-gradient-to-br from-transparent via-transparent to-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                <img
-                  src="/placeholder-9o46q.png"
-                  alt="CAD Design Detail"
-                  className="w-full h-full object-cover"
-                />
-              </div>
-              
-              {/* Additional medium image - middle left */}
-              <div className="absolute top-1/3 left-0 w-1/3 h-1/4 rounded-2xl overflow-hidden shadow-2xl hover:shadow-3xl transition-all duration-500 hover:scale-105 hover:-rotate-1 z-25 hover:z-50 group">
-                <div className="absolute inset-0 bg-gradient-to-br from-transparent via-transparent to-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                <img
-                  src="/placeholder-er1g1.png"
-                  alt="AI Detail"
-                  className="w-full h-full object-cover"
-                />
-              </div>
             </div>
             
             {/* Mobile responsive fallback */}
             <div className="lg:hidden grid grid-cols-2 gap-4 mt-8">
               <div className="h-48 rounded-xl overflow-hidden shadow-2xl">
-                <img src="/placeholder-9o46q.png" alt="CAD Design Workspace" className="w-full h-full object-cover" />
+                <img src="/GroupSaintPat.jpg" alt="Group Photo" className="w-full h-full object-cover" />
               </div>
               <div className="h-48 rounded-xl overflow-hidden shadow-2xl">
-                <img src="/placeholder-er1g1.png" alt="AI Neural Network" className="w-full h-full object-cover" />
-              </div>
-              <div className="h-48 rounded-xl overflow-hidden shadow-2xl">
-                <img src="/placeholder-3vv1s.png" alt="Embedded Systems" className="w-full h-full object-cover" />
-              </div>
-              <div className="h-48 rounded-xl overflow-hidden shadow-2xl">
-                <img src="/placeholder-ctygy.png" alt="Mechatronics Robot" className="w-full h-full object-cover" />
+                <img src="/TreeHug.jpg" alt="Tree Hug" className="w-full h-full object-cover" />
               </div>
             </div>
           </div>
