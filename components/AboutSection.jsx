@@ -55,11 +55,11 @@ export default function AboutSection() {
           <div className="space-y-16">
             <div className="space-y-16">
                 <p className="leading-relaxed text-4xl font-bold" style={{ color: "#ffffff" }}>
-                Hi — I’m Anurag: a hands-on Mechatronics + AI student who turns messy sketches into soldered circuits, prototype chaos, and repeatable demos.
+                  Hi — I'm Anurag. Curious maker, coffee-lover, and someone who prefers figuring things out with my hands (and a little chaos).
                 </p>
                 
                 <p className="leading-relaxed text-3xl" style={{ color: "#f1f5f9" }}>
-                I get a kick from forcing messy sketches into reality — CAD, solder, code, repeat — usually fueled by coffee and stubborn curiosity. Hunting down elusive bugs, shaving latency, and shipping demos that actually work are what get me out of bed. If it’s practical, weird, or stubborn, I’ll make it work (and celebrate the victory — or hilarious failure).
+                  I love turning rough sketches into working prototypes, running beginner-friendly workshops, and helping friends debug — the messy, hands-on part is my favorite. Outside the lab I recharge with good coffee, a quick workout, and decent sleep — it keeps me curious and calm.
                 </p>
                 
                 <p className="leading-relaxed text-3xl" style={{ color: "#f1f5f9" }}>
@@ -110,17 +110,26 @@ export default function AboutSection() {
                 />
               </div>
               
-            </div>
-            
-            {/* Mobile responsive fallback */}
-            <div className="lg:hidden grid grid-cols-2 gap-4 mt-8">
-              <div className="h-48 rounded-xl overflow-hidden shadow-2xl">
-                <img src="/GroupSaintPat.jpg" alt="Group Photo" className="w-full h-full object-cover" />
+              {/* Medium accent image - bottom right */}
+              <div className="absolute bottom-0 right-0 w-2/5 h-1/3 rounded-2xl overflow-hidden shadow-2xl hover:shadow-3xl transition-all duration-500 hover:scale-105 hover:rotate-2 z-40 hover:z-50 group">
+                <div className="absolute inset-0 bg-gradient-to-br from-transparent via-transparent to-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <img
+                  src="/placeholder-9o46q.png"
+                  alt="CAD Design Detail"
+                  className="w-full h-full object-cover"
+                />
               </div>
-              <div className="h-48 rounded-xl overflow-hidden shadow-2xl">
-                <img src="/TreeHug.jpg" alt="Tree Hug" className="w-full h-full object-cover" />
+              
+              {/* Additional medium image - middle left */}
+              <div className="absolute top-1/3 left-0 w-1/3 h-1/4 rounded-2xl overflow-hidden shadow-2xl hover:shadow-3xl transition-all duration-500 hover:scale-105 hover:-rotate-1 z-25 hover:z-50 group">
+                <div className="absolute inset-0 bg-gradient-to-br from-transparent via-transparent to-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <img
+                  src="/placeholder-er1g1.png"
+                  alt="AI Detail"
+                  className="w-full h-full object-cover"
+                />
               </div>
-            </div>
+            </div>  
           </div>
         </div>
       </div>

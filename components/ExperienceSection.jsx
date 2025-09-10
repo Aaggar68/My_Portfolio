@@ -13,8 +13,8 @@ export default function ExperienceSection() {
       description:
         "Deployed a real-time vision inspection and monitoring system on the production line to catch surface defects early and streamline post-cast handling.",
       timelineDescription: [
-        "Led rollout of a real-time automated inspection & monitoring system on the production line that replaced manual checks, caught subtle surface defects earlier, and reduced rework through proactive thermal-anomaly alerts.",
-        "Built the end-to-end hardware + software stack: Jetson Nano + GigE vision (PyTorch/OpenCV), STM32 DAQ → MQTT → InfluxDB/Grafana, KiCad PCB with C/C++ FreeRTOS firmware, and ROS-enabled pick-and-place integration."
+        "Reduced manual inspection time by ~33% and improved early defect detection by deploying a real-time vision system on the production line.",
+        "Engineered end-to-end systems: KiCad PCBs, STM32 RTOS firmware, Jetson-accelerated vision (PyTorch/TensorRT), MQTT telemetry, and ROS-enabled pick-and-place integration."
       ]
     },
     {
