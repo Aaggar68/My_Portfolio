@@ -1,6 +1,6 @@
 "use client"
 
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import Navigation from "../components/Navigation"
 import HeroSection from "../components/HeroSection"
 import AboutSection from "../components/AboutSection"
@@ -20,6 +20,28 @@ export default function Portfolio() {
       setActiveSection(sectionId)
     }
   }
+
+  // Add scroll detection to automatically highlight current section
+  useEffect(() => {
+    const handleScroll = () => {
+      const sections = ["about", "experience", "projects", "skills", "contact"]
+      const scrollPosition = window.scrollY + 100 // Offset for better detection
+
+      for (const section of sections) {
+        const element = document.getElementById(section)
+        if (element) {
+          const { offsetTop, offsetHeight } = element
+          if (scrollPosition >= offsetTop && scrollPosition < offsetTop + offsetHeight) {
+            setActiveSection(section)
+            break
+          }
+        }
+      }
+    }
+
+    window.addEventListener("scroll", handleScroll)
+    return () => window.removeEventListener("scroll", handleScroll)
+  }, [])
 
   return (
     <div

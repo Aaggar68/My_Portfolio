@@ -30,43 +30,71 @@ export default function ProjectsSection() {
       timeSpan: "Jun 2023 - Aug 2023",
     },
     {
-      title: "TinyML Model Deployment",
-      description:
-        "Workflow to quantize and deploy compact ML models on microcontrollers with measured latency and power.",
-      tech: ["TFLite Micro", "Quantization", "STM32", "Edge AI"],
-      thumbnail: "/tinyml-microcontroller-deployment.jpg",
-      github: "https://github.com/Aaggar68/tinyml-deployment",
-      timeSpan: "Apr 2023 - May 2023",
-    },
-    {
       title: "Stock Analyzer",
       description:
-        "Data-driven trading insights Python tool that ingests historical & real-time market data, computes technical indicators, backtests strategies, and visualizes buy/sell signals in an interactive dashboard.",
+        "Data-driven trading insights Python tool that ingests historical & real-time market data, computes financial advice for stock and crypto trading and giving insights on the stocks to buy and sell.",
       tech: ["Python", "pandas", "Streamlit", "Technical Analysis"],
       thumbnail: "/stock-analyzer-dashboard.jpg",
       github: "https://github.com/Aaggar68/stock-analyzer",
-      timeSpan: "Feb 2023 - Mar 2023",
+      timeSpan: "Mar 2024 - Apr 2024",
     },
   ]
 
   return (
     <section
       id="projects"
-      className="px-6 py-24"
+      className="px-6 py-24 relative"
       style={{
-        background: "linear-gradient(135deg, #f43f5e 0%, #ec4899 50%, #9333ea 100%)",
+        background: "linear-gradient(135deg, #475569 0%, #334155 30%, #1e293b 70%, #0f172a 100%)",
         minHeight: "100vh",
       }}
     >
-      <div className="max-w-6xl mx-auto">
+      {/* Cyberpunk Animation Background */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        <div className="absolute top-0 left-0 w-full h-full opacity-8">
+          <svg className="w-full h-full" viewBox="0 0 1200 800" preserveAspectRatio="none">
+            <defs>
+              <pattern id="projects-cyber" x="0" y="0" width="160" height="160" patternUnits="userSpaceOnUse">
+                <path d="M16,16 L144,16 L144,32 L128,32 L128,48 L144,48 L144,64 L112,64 L112,80 L144,80 L144,96 L96,96 L96,112 L144,112 L144,128 L80,128 L80,144 L144,144" 
+                      stroke="#00ff88" strokeWidth="2" fill="none" opacity="0.4">
+                  <animate attributeName="stroke-dasharray" values="0,320;320,0;0,320" dur="8s" repeatCount="indefinite"/>
+                  <animate attributeName="stroke" values="#00ff88;#ff0080;#00ffff;#00ff88" dur="2.8s" repeatCount="indefinite"/>
+                </path>
+                <circle cx="32" cy="32" r="2.5" fill="#00ff88" opacity="0.6">
+                  <animate attributeName="opacity" values="0.6;0.1;0.6" dur="2s" repeatCount="indefinite"/>
+                  <animate attributeName="fill" values="#00ff88;#ff0080;#00ff88" dur="2.5s" repeatCount="indefinite"/>
+                </circle>
+                <circle cx="128" cy="128" r="2.5" fill="#ff0080" opacity="0.6">
+                  <animate attributeName="opacity" values="0.1;0.6;0.1" dur="2s" repeatCount="indefinite"/>
+                  <animate attributeName="fill" values="#ff0080;#00ffff;#ff0080" dur="2.5s" repeatCount="indefinite"/>
+                </circle>
+                <rect x="64" y="64" width="9" height="9" fill="#00ffff" opacity="0.4">
+                  <animate attributeName="opacity" values="0.4;0.8;0.4" dur="1.3s" repeatCount="indefinite"/>
+                  <animate attributeName="fill" values="#00ffff;#00ff88;#00ffff" dur="2s" repeatCount="indefinite"/>
+                </rect>
+                <polygon points="48,48 64,48 56,64" fill="#ff0080" opacity="0.3">
+                  <animate attributeName="opacity" values="0.3;0.6;0.3" dur="1.1s" repeatCount="indefinite"/>
+                  <animate attributeName="fill" values="#ff0080;#00ffff;#ff0080" dur="1.7s" repeatCount="indefinite"/>
+                </polygon>
+              </pattern>
+            </defs>
+            <rect width="100%" height="100%" fill="url(#projects-cyber)"/>
+          </svg>
+        </div>
+        {/* Glitch effects */}
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-green-400/4 to-transparent animate-pulse"></div>
+        <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-green-400 to-transparent animate-pulse"></div>
+        <div className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-pink-400 to-transparent animate-pulse"></div>
+      </div>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <h2 className="font-bold text-center mb-8 text-5xl" style={{ color: "#ffffff" }}>
           Projects
         </h2>
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 justify-items-center">
+        <div className="grid sm:grid-cols-1 lg:grid-cols-2 gap-12 justify-items-center">
           {projects.map((project, index) => (
             <div
               key={index}
-              className="rounded-xl p-8 shadow-lg border transition-all duration-300 cursor-pointer hover:scale-105 w-full max-w-md relative"
+              className="rounded-2xl p-8 shadow-2xl border transition-all duration-300 cursor-pointer hover:scale-105 w-full max-w-2xl relative"
               style={{
                 background: "rgba(0, 0, 0, 0.4)",
                 backdropFilter: "blur(10px)",
@@ -82,7 +110,7 @@ export default function ProjectsSection() {
               {/* Time Span Badge */}
               <div className="absolute top-4 right-4 z-10">
                 <span
-                  className="px-3 py-1 rounded-full text-xs font-medium border backdrop-blur-sm"
+                  className="px-4 py-2 rounded-full text-sm font-semibold border backdrop-blur-sm"
                   style={{
                     background: "rgba(255, 255, 255, 0.2)",
                     color: "#ffffff",
@@ -93,25 +121,25 @@ export default function ProjectsSection() {
                 </span>
               </div>
               
-              <div className="mb-4 rounded-lg overflow-hidden">
+              <div className="mb-6 rounded-xl overflow-hidden">
                 <img
                   src={project.thumbnail || "/placeholder.svg"}
                   alt={`${project.title} preview`}
-                  className="w-full h-48 object-cover transition-transform duration-300 hover:scale-110"
+                  className="w-full h-64 object-cover transition-transform duration-300 hover:scale-110"
                 />
               </div>
               <div className="text-center">
-                <h3 className="text-xl font-semibold mb-2" style={{ color: "#ffffff" }}>
+                <h3 className="text-2xl font-bold mb-4" style={{ color: "#ffffff" }}>
                   {project.title}
                 </h3>
-                <p className="leading-relaxed mb-4" style={{ color: "#e5e7eb" }}>
+                <p className="leading-relaxed mb-6 text-lg" style={{ color: "#f1f5f9" }}>
                   {project.description}
                 </p>
-                <div className="flex flex-wrap gap-2 justify-center mb-4">
+                <div className="flex flex-wrap gap-3 justify-center mb-6">
                   {project.tech.map((tech) => (
                     <span
                       key={tech}
-                      className="px-3 py-1 rounded-full text-xs font-medium border"
+                      className="px-4 py-2 rounded-full text-sm font-semibold border"
                       style={{
                         background: "rgba(0, 0, 0, 0.3)",
                         color: "#ffffff",
@@ -126,14 +154,14 @@ export default function ProjectsSection() {
                   href={project.github}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 px-4 py-2 rounded-lg transition-all duration-300 hover:scale-105"
+                  className="inline-flex items-center gap-3 px-6 py-3 rounded-xl transition-all duration-300 hover:scale-105 font-semibold text-lg"
                   style={{
                     background: "rgba(255, 255, 255, 0.1)",
                     color: "#ffffff",
-                    border: "1px solid rgba(255, 255, 255, 0.3)",
+                    border: "2px solid rgba(255, 255, 255, 0.3)",
                   }}
                 >
-                  <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                  <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
                     <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
                   </svg>
                   View on GitHub
@@ -144,15 +172,19 @@ export default function ProjectsSection() {
         </div>
       </div>
 
-      <div className="flex justify-center mt-12">
+      <div className="flex justify-center mt-16 mb-8">
         <button
           onClick={() => window.scrollTo({ top: document.getElementById("skills").offsetTop, behavior: "smooth" })}
-          className="text-white hover:text-yellow-300 transition-colors duration-300 animate-bounce"
-          style={{ color: "#ffffff" }}
+          className="text-white hover:text-yellow-300 transition-all duration-300 animate-bounce hover:scale-110 p-3 rounded-full backdrop-blur-sm"
+          style={{ 
+            color: "#ffffff",
+            background: "rgba(255, 255, 255, 0.1)",
+            border: "2px solid rgba(255, 255, 255, 0.2)",
+          }}
           aria-label="Scroll to skills section"
         >
           <svg
-            className="w-8 h-8"
+            className="w-10 h-10"
             fill="none"
             stroke="currentColor"
             viewBox="0 0 24 24"

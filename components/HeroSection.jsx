@@ -8,10 +8,47 @@ export default function HeroSection({ scrollToSection }) {
     <section
       className="px-6 flex-col items-center relative pb-0 pt-64"
       style={{
-        background: "linear-gradient(135deg, #1e1b4b 0%, #581c87 50%, #06b6d4 100%)",
+        background: "linear-gradient(135deg, #0f172a 0%, #1e293b 30%, #334155 70%, #475569 100%)",
         minHeight: "100vh",
       }}
     >
+      {/* Cyberpunk Animation Background */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        <div className="absolute top-0 left-0 w-full h-full opacity-15">
+          <svg className="w-full h-full" viewBox="0 0 1200 800" preserveAspectRatio="none">
+            <defs>
+              <pattern id="hero-cyber" x="0" y="0" width="200" height="200" patternUnits="userSpaceOnUse">
+                <path d="M20,20 L180,20 L180,40 L160,40 L160,60 L180,60 L180,80 L140,80 L140,100 L180,100 L180,120 L120,120 L120,140 L180,140 L180,160 L100,160 L100,180 L180,180" 
+                      stroke="#00ff88" strokeWidth="2.5" fill="none" opacity="0.7">
+                  <animate attributeName="stroke-dasharray" values="0,400;400,0;0,400" dur="8s" repeatCount="indefinite"/>
+                  <animate attributeName="stroke" values="#00ff88;#ff0080;#00ffff;#00ff88" dur="3s" repeatCount="indefinite"/>
+                </path>
+                <circle cx="40" cy="40" r="4" fill="#00ff88" opacity="0.8">
+                  <animate attributeName="opacity" values="0.8;0.1;0.8" dur="2s" repeatCount="indefinite"/>
+                  <animate attributeName="fill" values="#00ff88;#ff0080;#00ff88" dur="2.5s" repeatCount="indefinite"/>
+                </circle>
+                <circle cx="160" cy="160" r="4" fill="#ff0080" opacity="0.8">
+                  <animate attributeName="opacity" values="0.1;0.8;0.1" dur="2s" repeatCount="indefinite"/>
+                  <animate attributeName="fill" values="#ff0080;#00ffff;#ff0080" dur="2.5s" repeatCount="indefinite"/>
+                </circle>
+                <rect x="80" y="80" width="10" height="10" fill="#00ffff" opacity="0.6">
+                  <animate attributeName="opacity" values="0.6;0.1;0.6" dur="1.5s" repeatCount="indefinite"/>
+                  <animate attributeName="fill" values="#00ffff;#ff0080;#00ffff" dur="2s" repeatCount="indefinite"/>
+                </rect>
+                <polygon points="50,50 70,50 60,70" fill="#ff0080" opacity="0.5">
+                  <animate attributeName="opacity" values="0.5;0.9;0.5" dur="1s" repeatCount="indefinite"/>
+                  <animate attributeName="fill" values="#ff0080;#00ff88;#ff0080" dur="1.5s" repeatCount="indefinite"/>
+                </polygon>
+              </pattern>
+            </defs>
+            <rect width="100%" height="100%" fill="url(#hero-cyber)"/>
+          </svg>
+        </div>
+        {/* Glitch effects */}
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-cyan-400/5 to-transparent animate-pulse"></div>
+        <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-cyan-400 to-transparent animate-pulse"></div>
+        <div className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-pink-400 to-transparent animate-pulse"></div>
+      </div>
       <style jsx>{`
         @keyframes gradientShift {
           0% { background-position: 0% 50%; }
@@ -28,7 +65,7 @@ export default function HeroSection({ scrollToSection }) {
         }
       `}</style>
 
-      <div className="max-w-4xl mx-auto text-center relative z-10">
+      <div className="max-w-7xl mx-auto text-center relative z-10 px-4 sm:px-6 lg:px-8">
         <div className="mb-6">
           <div className="relative mx-auto mb-6 w-[300px] h-[300px]">
             <Image
@@ -41,35 +78,37 @@ export default function HeroSection({ scrollToSection }) {
           <h1 className="font-bold gradient-text mt-0 mb-0.5 text-7xl py-3">Anurag Aggarwal</h1>
           <p
             className="text-gray-200 max-w-2xl mx-auto leading-relaxed mb-6 mt-2 text-2xl"
-            style={{ color: "#e5e7eb" }}
+            style={{ color: "#f8fafc" }}
           >
-            Mechatronics + AI engineer — building intelligent hardware and software that solve real-world problems. Turning sensors, motors, and data into products that move, think, and improve lives
+            Mechatronics + AI engineer — building intelligent hardware and software that solve real-world problems. 
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-6">
+          <div className="flex flex-col sm:flex-row gap-6 justify-center mb-8">
             <Button
               size="lg"
-              className="px-16 py-6 rounded-full text-xl font-semibold transition-all duration-300 hover:scale-110 hover:shadow-2xl border-0 backdrop-blur-md"
+              className="px-20 py-8 rounded-full text-2xl font-bold transition-all duration-300 hover:scale-110 hover:shadow-2xl border-0 backdrop-blur-md"
               style={{
-                background: "rgba(147, 51, 234, 0.3)",
-                border: "2px solid rgba(147, 51, 234, 0.5)",
+                background: "rgba(14, 165, 233, 0.3)",
+                border: "3px solid rgba(14, 165, 233, 0.5)",
                 color: "#ffffff",
                 backdropFilter: "blur(10px)",
-                boxShadow: "0 8px 32px rgba(147, 51, 234, 0.3)",
+                boxShadow: "0 12px 40px rgba(14, 165, 233, 0.4)",
+                minHeight: "60px",
               }}
-              onClick={() => scrollToSection("projects")}
+              onClick={() => scrollToSection("experience")}
             >
               View My Work
             </Button>
             <Button
               variant="outline"
               size="lg"
-              className="px-16 py-6 rounded-full text-xl font-semibold transition-all duration-300 hover:scale-110 hover:shadow-2xl backdrop-blur-md bg-transparent"
+              className="px-20 py-8 rounded-full text-2xl font-bold transition-all duration-300 hover:scale-110 hover:shadow-2xl backdrop-blur-md bg-transparent"
               style={{
-                border: "2px solid rgba(255, 255, 255, 0.4)",
+                border: "3px solid rgba(255, 255, 255, 0.4)",
                 color: "#ffffff",
                 background: "rgba(0, 0, 0, 0.3)",
                 backdropFilter: "blur(10px)",
-                boxShadow: "0 8px 32px rgba(0, 0, 0, 0.2)",
+                boxShadow: "0 12px 40px rgba(0, 0, 0, 0.3)",
+                minHeight: "60px",
               }}
               onClick={() => scrollToSection("contact")}
             >
@@ -77,16 +116,17 @@ export default function HeroSection({ scrollToSection }) {
             </Button>
           </div>
 
-          <div className="flex justify-center gap-6">
+          <div className="flex justify-center gap-8">
             <button
               onClick={() => window.open("https://github.com/Aaggar68", "_blank")}
-              className="group p-3 rounded-full transition-all duration-300 hover:scale-110 shadow-lg hover:shadow-xl"
+              className="group p-5 rounded-full transition-all duration-300 hover:scale-110 shadow-xl hover:shadow-2xl"
               style={{
                 background: "linear-gradient(135deg, #374151 0%, #111827 100%)",
+                border: "2px solid rgba(255, 255, 255, 0.2)",
               }}
             >
               <svg
-                className="w-6 h-6 text-white group-hover:text-green-400 transition-colors duration-300"
+                className="w-8 h-8 text-white group-hover:text-green-400 transition-colors duration-300"
                 fill="currentColor"
                 viewBox="0 0 24 24"
               >
@@ -96,13 +136,14 @@ export default function HeroSection({ scrollToSection }) {
 
             <button
               onClick={() => window.open("https://www.linkedin.com/in/aaggar68", "_blank")}
-              className="group p-3 rounded-full transition-all duration-300 hover:scale-110 shadow-lg hover:shadow-xl"
+              className="group p-5 rounded-full transition-all duration-300 hover:scale-110 shadow-xl hover:shadow-2xl"
               style={{
                 background: "linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%)",
+                border: "2px solid rgba(255, 255, 255, 0.2)",
               }}
             >
               <svg
-                className="w-6 h-6 text-white group-hover:text-blue-200 transition-colors duration-300"
+                className="w-8 h-8 text-white group-hover:text-blue-200 transition-colors duration-300"
                 fill="currentColor"
                 viewBox="0 0 24 24"
               >
@@ -112,13 +153,14 @@ export default function HeroSection({ scrollToSection }) {
 
             <button
               onClick={() => window.open("mailto:anuragaggarwal0612@gmail.com", "_blank")}
-              className="group p-3 rounded-full transition-all duration-300 hover:scale-110 shadow-lg hover:shadow-xl"
+              className="group p-5 rounded-full transition-all duration-300 hover:scale-110 shadow-xl hover:shadow-2xl"
               style={{
                 background: "linear-gradient(135deg, #ef4444 0%, #dc2626 100%)",
+                border: "2px solid rgba(255, 255, 255, 0.2)",
               }}
             >
               <svg
-                className="w-6 h-6 text-white group-hover:text-red-200 transition-colors duration-300"
+                className="w-8 h-8 text-white group-hover:text-red-200 transition-colors duration-300"
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"
@@ -135,15 +177,19 @@ export default function HeroSection({ scrollToSection }) {
           </div>
         </div>
 
-        <div className="flex justify-center mt-8">
+        <div className="flex justify-center mt-12">
           <button
             onClick={() => scrollToSection("about")}
-            className="text-white hover:text-yellow-300 transition-colors duration-300 animate-bounce"
-            style={{ color: "#ffffff" }}
+            className="text-white hover:text-yellow-300 transition-all duration-300 animate-bounce hover:scale-110 p-3 rounded-full backdrop-blur-sm"
+            style={{ 
+              color: "#ffffff",
+              background: "rgba(255, 255, 255, 0.1)",
+              border: "2px solid rgba(255, 255, 255, 0.2)",
+            }}
             aria-label="Scroll to about section"
           >
             <svg
-              className="w-8 h-8"
+              className="w-10 h-10"
               fill="none"
               stroke="currentColor"
               viewBox="0 0 24 24"

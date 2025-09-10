@@ -9,17 +9,49 @@ export default function ContactSection() {
       id="contact"
       className="py-20 px-6 relative overflow-hidden"
       style={{
-        background: "linear-gradient(135deg, #10b981 0%, #059669 50%, #047857 100%)",
+        background: "linear-gradient(135deg, #475569 0%, #334155 30%, #1e293b 70%, #0f172a 100%)",
         minHeight: "100vh",
       }}
     >
-      <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute top-20 left-10 w-32 h-32 bg-white/10 rounded-full blur-xl animate-pulse"></div>
-        <div className="absolute bottom-20 right-10 w-40 h-40 bg-white/5 rounded-full blur-2xl animate-pulse delay-1000"></div>
-        <div className="absolute top-1/2 left-1/3 w-24 h-24 bg-white/10 rounded-full blur-lg animate-bounce delay-500"></div>
+      {/* Cyberpunk Animation Background */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        <div className="absolute top-0 left-0 w-full h-full opacity-4">
+          <svg className="w-full h-full" viewBox="0 0 1200 800" preserveAspectRatio="none">
+            <defs>
+              <pattern id="contact-cyber" x="0" y="0" width="120" height="120" patternUnits="userSpaceOnUse">
+                <path d="M12,12 L108,12 L108,24 L96,24 L96,36 L108,36 L108,48 L84,48 L84,60 L108,60 L108,72 L72,72 L72,84 L108,84 L108,96 L60,96 L60,108 L108,108" 
+                      stroke="#00ffff" strokeWidth="2" fill="none" opacity="0.2">
+                  <animate attributeName="stroke-dasharray" values="0,240;240,0;0,240" dur="6s" repeatCount="indefinite"/>
+                  <animate attributeName="stroke" values="#00ffff;#00ff88;#ff0080;#00ffff" dur="2.4s" repeatCount="indefinite"/>
+                </path>
+                <circle cx="24" cy="24" r="2.5" fill="#00ffff" opacity="0.4">
+                  <animate attributeName="opacity" values="0.4;0.1;0.4" dur="1.6s" repeatCount="indefinite"/>
+                  <animate attributeName="fill" values="#00ffff;#00ff88;#00ffff" dur="2.1s" repeatCount="indefinite"/>
+                </circle>
+                <circle cx="96" cy="96" r="2.5" fill="#00ff88" opacity="0.4">
+                  <animate attributeName="opacity" values="0.1;0.4;0.1" dur="1.6s" repeatCount="indefinite"/>
+                  <animate attributeName="fill" values="#00ff88;#ff0080;#00ff88" dur="2.1s" repeatCount="indefinite"/>
+                </circle>
+                <rect x="48" y="48" width="7" height="7" fill="#ff0080" opacity="0.3">
+                  <animate attributeName="opacity" values="0.3;0.6;0.3" dur="1.1s" repeatCount="indefinite"/>
+                  <animate attributeName="fill" values="#ff0080;#00ffff;#ff0080" dur="1.8s" repeatCount="indefinite"/>
+                </rect>
+                <polygon points="36,36 48,36 42,48" fill="#00ff88" opacity="0.2">
+                  <animate attributeName="opacity" values="0.2;0.4;0.2" dur="0.9s" repeatCount="indefinite"/>
+                  <animate attributeName="fill" values="#00ff88;#00ffff;#00ff88" dur="1.5s" repeatCount="indefinite"/>
+                </polygon>
+              </pattern>
+            </defs>
+            <rect width="100%" height="100%" fill="url(#contact-cyber)"/>
+          </svg>
+        </div>
+        {/* Glitch effects */}
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-cyan-400/2 to-transparent animate-pulse"></div>
+        <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-cyan-400 to-transparent animate-pulse"></div>
+        <div className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-pink-400 to-transparent animate-pulse"></div>
       </div>
 
-      <div className="max-w-6xl mx-auto text-center relative z-10">
+      <div className="max-w-7xl mx-auto text-center relative z-10 px-4 sm:px-6 lg:px-8 pt-20">
         <div className="mb-12">
           <div className="flex items-center justify-center gap-3 mb-6">
             <Rocket className="w-8 h-8 text-white animate-bounce" />
@@ -37,7 +69,7 @@ export default function ContactSection() {
           coffee? Hit me up — I'd love to help or just swap stories.
         </p>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-5xl mx-auto mb-16">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           <div className="bg-white/95 backdrop-blur-sm p-8 rounded-2xl shadow-2xl hover:scale-105 hover:shadow-3xl transition-all duration-300 border border-white/20">
             <div className="bg-blue-500 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
               <LinkedinIcon className="w-8 h-8 text-white" />
