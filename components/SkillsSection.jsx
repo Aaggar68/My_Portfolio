@@ -73,8 +73,8 @@ export default function SkillsSection() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-16">
-          <p className="text-blue-400 text-sm font-semibold tracking-wider uppercase mb-2">TECHNICAL EXPERTISE</p>
-          <h2 className="font-bold text-5xl mb-6" style={{ color: "#ffffff" }}>
+          <p className="text-white text-base font-semibold tracking-wider uppercase mb-2">TECHNICAL EXPERTISE</p>
+          <h2 className="font-bold text-6xl mb-6" style={{ color: "#ffffff" }}>
             Engineering Skills
           </h2>
           <p className="text-lg leading-relaxed max-w-3xl mx-auto" style={{ color: "#1e293b" }}>
