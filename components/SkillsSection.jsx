@@ -2,24 +2,162 @@
 
 export default function SkillsSection() {
   const mainSkills = [
-    "Embedded systems & firmware",
-    "Control systems & motor control (PID / FOC)",
-    "Sensor fusion & state estimation",
-    "Computer vision & perception",
-    "TinyML & edge inference",
-    "System integration & rapid prototyping",
-    "Python",
-    "C / C++",
-    "Git",
-    "Linux / Bash",
-    "ROS / ROS2",
+    { 
+      name: "Embedded systems & firmware",
+      colors: {
+        background: "rgba(0, 123, 191, 0.1)",
+        border: "rgba(0, 123, 191, 0.3)",
+        dot: "#007bbf"
+      }
+    },
+    { 
+      name: "Control systems & motor control (PID / FOC)",
+      colors: {
+        background: "rgba(220, 38, 127, 0.1)",
+        border: "rgba(220, 38, 127, 0.3)",
+        dot: "#dc267f"
+      }
+    },
+    { 
+      name: "Sensor fusion & state estimation",
+      colors: {
+        background: "rgba(118, 185, 0, 0.1)",
+        border: "rgba(118, 185, 0, 0.3)",
+        dot: "#76b900"
+      }
+    },
+    { 
+      name: "Computer vision & perception",
+      colors: {
+        background: "rgba(66, 133, 244, 0.1)",
+        border: "rgba(66, 133, 244, 0.3)",
+        dot: "#4285f4"
+      }
+    },
+    { 
+      name: "TinyML & edge inference",
+      colors: {
+        background: "rgba(255, 140, 0, 0.1)",
+        border: "rgba(255, 140, 0, 0.3)",
+        dot: "#ff8c00"
+      }
+    },
+    { 
+      name: "System integration & rapid prototyping",
+      colors: {
+        background: "rgba(156, 39, 176, 0.1)",
+        border: "rgba(156, 39, 176, 0.3)",
+        dot: "#9c27b0"
+      }
+    },
+    { 
+      name: "Python",
+      colors: {
+        background: "rgba(255, 193, 7, 0.1)",
+        border: "rgba(255, 193, 7, 0.3)",
+        dot: "#ffc107"
+      }
+    },
+    { 
+      name: "C / C++",
+      colors: {
+        background: "rgba(0, 150, 136, 0.1)",
+        border: "rgba(0, 150, 136, 0.3)",
+        dot: "#009688"
+      }
+    },
+    { 
+      name: "Git",
+      colors: {
+        background: "rgba(244, 67, 54, 0.1)",
+        border: "rgba(244, 67, 54, 0.3)",
+        dot: "#f44336"
+      }
+    },
+    { 
+      name: "Linux / Bash",
+      colors: {
+        background: "rgba(76, 175, 80, 0.1)",
+        border: "rgba(76, 175, 80, 0.3)",
+        dot: "#4caf50"
+      }
+    },
+    { 
+      name: "ROS / ROS2",
+      colors: {
+        background: "rgba(33, 150, 243, 0.1)",
+        border: "rgba(33, 150, 243, 0.3)",
+        dot: "#2196f3"
+      }
+    },
+    { 
+      name: "SOLIDWORKS CAD Design",
+      colors: {
+        background: "rgba(0, 123, 191, 0.1)",
+        border: "rgba(0, 123, 191, 0.3)",
+        dot: "#007bbf"
+      }
+    },
+    { 
+      name: "3D Modeling & Assembly",
+      colors: {
+        background: "rgba(0, 123, 191, 0.1)",
+        border: "rgba(0, 123, 191, 0.3)",
+        dot: "#007bbf"
+      }
+    },
+    { 
+      name: "Technical Drawings & GD&T",
+      colors: {
+        background: "rgba(0, 123, 191, 0.1)",
+        border: "rgba(0, 123, 191, 0.3)",
+        dot: "#007bbf"
+      }
+    },
   ]
 
   const certifications = [
-    { name: "SOLIDWORKS CAD Design Associate (CSWA)", thumbnail: "/solidworks-cswa-certificate.jpg", date: "2024" },
-    { name: "NVIDIA DLI — Jetson / Deep Learning for Computer Vision", thumbnail: "/nvidia-dli-jetson-certificate.jpg", date: "2023" },
-    { name: "Google Professional Machine Learning Engineer", thumbnail: "/google-ml-engineer-certificate.jpg", date: "2023" },
-    { name: "AWS Certified Machine Learning", thumbnail: "/aws-ml-certificate.jpg", date: "2024" },
+    { 
+      name: "SOLIDWORKS CAD Design Associate (CSWA)", 
+      thumbnail: "/solidworks-cswa-certificate.jpg", 
+      date: "2024",
+      verificationLink: "https://cv.virtualtester.com/qr/?b=SLDWRKS&i=C-ZVKXSA543B",
+      colors: {
+        background: "rgba(0, 123, 191, 0.1)",
+        border: "rgba(0, 123, 191, 0.4)",
+        hover: "rgba(0, 123, 191, 0.8)"
+      }
+    },
+    { 
+      name: "NVIDIA DLI — Jetson / Deep Learning for Computer Vision", 
+      thumbnail: "/nvidia-dli-jetson-certificate.jpg", 
+      date: "In progress",
+      colors: {
+        background: "rgba(118, 185, 0, 0.1)",
+        border: "rgba(118, 185, 0, 0.4)",
+        hover: "rgba(118, 185, 0, 0.8)"
+      }
+    },
+    { 
+      name: "Google Professional Machine Learning Engineer", 
+      thumbnail: "/google-ml-engineer-certificate.jpg", 
+      date: "In progress",
+      colors: {
+        background: "rgba(66, 133, 244, 0.1)",
+        border: "rgba(66, 133, 244, 0.4)",
+        hover: "rgba(66, 133, 244, 0.8)"
+      }
+    },
+    { 
+      name: "AWS Certified Machine Learning", 
+      thumbnail: "/aws-ml-certificate.jpg", 
+      date: "In progress",
+      colors: {
+        background: "rgba(255, 140, 0, 0.1)",
+        border: "rgba(255, 140, 0, 0.4)",
+        hover: "rgba(255, 140, 0, 0.8)"
+      }
+    },
   ]
 
   return (
@@ -89,15 +227,15 @@ export default function SkillsSection() {
                 key={index}
                 className="p-4 rounded-lg transition-all duration-300 hover:scale-105"
                 style={{
-                  background: "rgba(0, 0, 0, 0.3)",
+                  background: skill.colors.background,
                   backdropFilter: "blur(10px)",
-                  border: "1px solid rgba(255, 255, 255, 0.1)",
+                  border: `1px solid ${skill.colors.border}`,
                 }}
               >
                 <div className="flex items-center space-x-3">
-                  <div className="w-2 h-2 rounded-full" style={{ background: "#3b82f6" }} />
+                  <div className="w-2 h-2 rounded-full" style={{ background: skill.colors.dot }} />
                   <span className="font-medium text-lg" style={{ color: "#ffffff" }}>
-                    {skill}
+                    {skill.name}
                   </span>
                 </div>
               </div>
@@ -115,15 +253,16 @@ export default function SkillsSection() {
                 key={index}
                 className="relative w-96 h-48 rounded-xl transition-all duration-300 hover:scale-105 hover:shadow-2xl overflow-hidden group cursor-pointer p-6 flex items-center justify-center"
                 style={{
-                  background: cert.name.includes("AWS") 
-                    ? "rgba(255, 140, 0, 0.1)" 
-                    : "rgba(0, 0, 0, 0.4)",
+                  background: cert.colors.background,
                   backdropFilter: "blur(10px)",
-                  border: cert.name.includes("AWS") 
-                    ? "2px solid rgba(255, 140, 0, 0.4)" 
-                    : "2px solid rgba(255, 255, 255, 0.2)",
+                  border: `2px solid ${cert.colors.border}`,
                   minWidth: "384px",
                   maxWidth: "384px",
+                }}
+                onClick={() => {
+                  if (cert.verificationLink) {
+                    window.open(cert.verificationLink, '_blank', 'noopener,noreferrer');
+                  }
                 }}
               >
                 {/* Date label button */}
@@ -131,13 +270,9 @@ export default function SkillsSection() {
                   <span
                     className="px-2 py-1 rounded-full text-xs font-semibold border backdrop-blur-sm"
                     style={{
-                      background: cert.name.includes("AWS") 
-                        ? "rgba(255, 140, 0, 0.2)" 
-                        : "rgba(255, 255, 255, 0.2)",
+                      background: cert.colors.background,
                       color: "#ffffff",
-                      borderColor: cert.name.includes("AWS") 
-                        ? "rgba(255, 140, 0, 0.4)" 
-                        : "rgba(255, 255, 255, 0.4)",
+                      borderColor: cert.colors.border,
                     }}
                   >
                     {cert.date}
@@ -149,23 +284,23 @@ export default function SkillsSection() {
                   <span className="text-base font-semibold leading-relaxed text-center text-white">
                     {cert.name}
                   </span>
+                  {cert.verificationLink && (
+                    <div className="mt-2 flex items-center justify-center">
+                      <span className="text-xs text-white/70 flex items-center gap-1">
+                        <svg className="w-3 h-3" fill="currentColor" viewBox="0 0 20 20">
+                          <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-8.707l-3-3a1 1 0 00-1.414 0l-3 3a1 1 0 001.414 1.414L9 9.414V13a1 1 0 102 0V9.414l1.293 1.293a1 1 0 001.414-1.414z" clipRule="evenodd" />
+                        </svg>
+                        Click to verify
+                      </span>
+                    </div>
+                  )}
                 </div>
                 
                 {/* Hover effect border */}
                 <div 
-                  className="absolute inset-0 border-2 border-transparent rounded-xl transition-all duration-300"
-                  style={{
-                    borderColor: cert.name.includes("AWS") 
-                      ? "transparent" 
-                      : "transparent"
-                  }}
-                ></div>
-                <div 
                   className="absolute inset-0 border-2 border-transparent group-hover:border-opacity-50 rounded-xl transition-all duration-300"
                   style={{
-                    borderColor: cert.name.includes("AWS") 
-                      ? "rgba(255, 140, 0, 0.8)" 
-                      : "rgba(6, 182, 212, 0.5)"
+                    borderColor: cert.colors.hover
                   }}
                 ></div>
               </div>

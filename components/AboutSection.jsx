@@ -71,9 +71,9 @@ export default function AboutSection() {
           </div>
           <div className="relative">
             {/* Modern Collage Layout - Larger Thumbnails */}
-            <div className="relative w-full h-[700px] lg:h-[800px] ml-4">
+            <div className="relative w-full h-[800px] lg:h-[900px] ml-4">
               {/* Large main image - top center-right */}
-              <div className="absolute top-0 left-1/6 w-3/5 h-1/2 rounded-2xl overflow-hidden shadow-2xl hover:shadow-3xl transition-all duration-500 hover:scale-105 hover:rotate-1 z-10 hover:z-50 group">
+              <div className="absolute top-0 left-0 w-2/3 h-3/5 rounded-2xl overflow-hidden shadow-2xl hover:shadow-3xl transition-all duration-500 hover:scale-105 hover:rotate-1 z-10 hover:z-50 group">
                 <div className="absolute inset-0 bg-gradient-to-br from-transparent via-transparent to-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 <Image
                   src="/GroupSaintPat.jpg"
@@ -84,7 +84,7 @@ export default function AboutSection() {
               </div>
               
               {/* Medium image - top right */}
-              <div className="absolute top-0 right-0 w-2/5 h-2/5 rounded-2xl overflow-hidden shadow-2xl hover:shadow-3xl transition-all duration-500 hover:scale-105 hover:-rotate-1 z-20 hover:z-50 group">
+              <div className="absolute top-0 right-0 w-1/3 h-2/5 rounded-2xl overflow-hidden shadow-2xl hover:shadow-3xl transition-all duration-500 hover:scale-105 hover:-rotate-1 z-20 hover:z-50 group">
                 <div className="absolute inset-0 bg-gradient-to-br from-transparent via-transparent to-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 <Image
                   src="/TreeHug.jpg"
@@ -95,10 +95,10 @@ export default function AboutSection() {
               </div>
               
               {/* Medium image - middle right */}
-              <div className="absolute top-1/2 right-1/8 w-1/3 h-1/3 rounded-2xl overflow-hidden shadow-2xl hover:shadow-3xl transition-all duration-500 hover:scale-105 hover:rotate-1 z-30 hover:z-50 group">
+              <div className="absolute top-1/2 right-0 w-1/3 h-1/3 rounded-2xl overflow-hidden shadow-2xl hover:shadow-3xl transition-all duration-500 hover:scale-105 hover:rotate-1 z-30 hover:z-50 group">
                 <div className="absolute inset-0 bg-gradient-to-br from-transparent via-transparent to-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 <Image 
-                  src="/anufish.jpg"  
+                  src="/CaskeSmash.jpg"  
                   alt="Anurag with fish"
                   fill
                   className="object-cover" 
@@ -106,10 +106,10 @@ export default function AboutSection() {
               </div>
               
               {/* Large bottom image - bottom center */}
-              <div className="absolute bottom-0 left-1/4 w-1/2 h-2/5 rounded-2xl overflow-hidden shadow-2xl hover:shadow-3xl transition-all duration-500 hover:scale-105 hover:-rotate-1 z-10 hover:z-50 group">
+              <div className="absolute bottom-0 left-0 w-1/2 h-2/5 rounded-2xl overflow-hidden shadow-2xl hover:shadow-3xl transition-all duration-500 hover:scale-105 hover:-rotate-1 z-10 hover:z-50 group">
                 <div className="absolute inset-0 bg-gradient-to-br from-transparent via-transparent to-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 <Image
-                  src="/CaskeSmash.jpg"
+                  src="/TobermoryLakeside.jpg"
                   alt="Cake smashing celebration"
                   fill
                   className="object-cover"
@@ -120,7 +120,7 @@ export default function AboutSection() {
               <div className="absolute bottom-0 right-0 w-2/5 h-1/3 rounded-2xl overflow-hidden shadow-2xl hover:shadow-3xl transition-all duration-500 hover:scale-105 hover:rotate-2 z-40 hover:z-50 group">
                 <div className="absolute inset-0 bg-gradient-to-br from-transparent via-transparent to-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 <Image
-                  src="/TobermoryLakeside.jpg"
+                  src="/anufish.jpg"
                   alt="Tobermory lakeside view"
                   fill
                   className="object-cover"
