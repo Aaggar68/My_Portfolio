@@ -8,13 +8,13 @@ export default function ProjectsSection() {
   
   const projects = [
     {
-      title: "BLDC Motor Controller (FOC)",
+      title: "Phish Sense – AI Phishing Detection System",
       description:
-        "Real-time BLDC controller with field-oriented control, current sensing, and safety interlocks for smooth torque.",
-      tech: ["C++", "STM32", "FOC", "Real-time Control"],
-      thumbnail: "/bldc-motor-controller-circuit-board.jpg",
-      github: "https://github.com/Aaggar68/bldc-motor-controller",
-      timeSpan: "Jan 2024 - Mar 2024",
+        "smart security system that learns phishing patterns through NLP models from data and flags malicious content in real time.",
+      tech: ["PyTorch", "DistilBERT", "FastAPI", "PostgreSQL", "React", "Chrome Extension", "Docker", "CI/CD"],
+      thumbnail: "/phish-sense-ai-detection.png",
+      github: "https://github.com/Aaggar68/phish-sense",
+      timeSpan: "Sep 2025 - Present",
     },
     {
       title: "Autonomous Delivery Rover",
@@ -26,15 +26,6 @@ export default function ProjectsSection() {
       timeSpan: "Sep 2024 - Dec 2024",
     },
     {
-      title: "Smart Greenhouse (TinyML)",
-      description:
-        "Automated greenhouse that predicts irrigation needs on-device using a tiny neural network and live dashboard.",
-      tech: ["TinyML", "Arduino", "IoT", "Neural Networks"],
-      thumbnail: "/smart-greenhouse-automation-system.jpg",
-      github: "https://github.com/Aaggar68/smart-greenhouse-tinyml",
-      timeSpan: "Jun 2023 - Aug 2023",
-    },
-    {
       title: "Stock Analyzer",
       description:
         "Data-driven trading insights Python tool that ingests historical & real-time market data, computes financial advice for stock and crypto trading and giving insights on the stocks to buy and sell.",
@@ -44,13 +35,22 @@ export default function ProjectsSection() {
       timeSpan: "Mar 2024 - Apr 2024",
     },
     {
-      title: "Phish Sense – AI Phishing Detection System",
+      title: "BLDC Motor Controller (FOC)",
       description:
-        "smart security system that learns phishing patterns through NLP models from data and flags malicious content in real time.",
-      tech: ["PyTorch", "DistilBERT", "FastAPI", "PostgreSQL", "React", "Chrome Extension", "Docker", "CI/CD"],
-      thumbnail: "/phish-sense-ai-detection.png",
-      github: "https://github.com/Aaggar68/phish-sense",
-      timeSpan: "Sep 2025 - Present",
+        "Real-time BLDC controller with field-oriented control, current sensing, and safety interlocks for smooth torque.",
+      tech: ["C++", "STM32", "FOC", "Real-time Control"],
+      thumbnail: "/bldc-motor-controller-circuit-board.jpg",
+      github: "https://github.com/Aaggar68/bldc-motor-controller",
+      timeSpan: "Jan 2024 - Mar 2024",
+    },
+    {
+      title: "Smart Greenhouse (TinyML)",
+      description:
+        "Automated greenhouse that predicts irrigation needs on-device using a tiny neural network and live dashboard.",
+      tech: ["TinyML", "Arduino", "IoT", "Neural Networks"],
+      thumbnail: "/smart-greenhouse-automation-system.jpg",
+      github: "https://github.com/Aaggar68/smart-greenhouse-tinyml",
+      timeSpan: "Jun 2023 - Aug 2023",
     },
   ]
   
