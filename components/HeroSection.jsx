@@ -14,7 +14,7 @@ export default function HeroSection({ scrollToSection }) {
     >
       {/* Cyberpunk Animation Background */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute top-0 left-0 w-full h-full opacity-15">
+        <div className="absolute top-0 left-0 w-full h-full opacity-8">
           <svg className="w-full h-full" viewBox="0 0 1200 800" preserveAspectRatio="none">
             <defs>
               <pattern id="hero-cyber" x="0" y="0" width="200" height="200" patternUnits="userSpaceOnUse">
@@ -65,9 +65,9 @@ export default function HeroSection({ scrollToSection }) {
         }
       `}</style>
 
-      <div className="max-w-7xl mx-auto text-center relative z-10 px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto text-center relative z-10 responsive-container">
         <div className="mb-6">
-          <div className="relative mx-auto mb-6 w-[300px] h-[300px]">
+          <div className="relative mx-auto mb-6 w-[min(300px,80vw)] h-[min(300px,80vw)]">
             <Image
               src="/ProfilePic.jpg"
               alt="Anurag Aggarwal"
@@ -75,10 +75,10 @@ export default function HeroSection({ scrollToSection }) {
               className="rounded-full object-cover border-violet-400 border-4 shadow-lg"
             />
           </div>
-          <h1 className="font-bold gradient-text mt-0 mb-0.5 text-7xl py-3">Anurag Aggarwal</h1>
+          <h1 className="font-bold gradient-text mt-0 mb-0.5 responsive-text py-3" style={{fontSize: 'clamp(2.5rem, 8vw, 4.5rem)'}}>Anurag Aggarwal</h1>
           <p
-            className="text-gray-200 max-w-2xl mx-auto leading-relaxed mb-6 mt-2 text-2xl"
-            style={{ color: "#f8fafc" }}
+            className="text-gray-200 max-w-2xl mx-auto leading-relaxed mb-6 mt-2 responsive-text"
+            style={{ color: "#f8fafc", fontSize: 'clamp(1.125rem, 3vw, 1.5rem)' }}
           >
             Mechatronics + AI engineer — building intelligent hardware and software that solve real-world problems. 
           </p>

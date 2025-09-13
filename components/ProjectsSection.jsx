@@ -1,5 +1,7 @@
 "use client"
 
+import Image from "next/image"
+
 export default function ProjectsSection() {
   const projects = [
     {
@@ -86,7 +88,7 @@ export default function ProjectsSection() {
         <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-green-400 to-transparent animate-pulse"></div>
         <div className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-pink-400 to-transparent animate-pulse"></div>
       </div>
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto responsive-container">
         <h2 className="font-bold text-center mb-6 text-6xl" style={{ color: "#ffffff" }}>
           Projects & Pandemonium
         </h2>
@@ -124,11 +126,12 @@ export default function ProjectsSection() {
                 </span>
               </div>
               
-              <div className="mb-6 rounded-xl overflow-hidden">
-                <img
+              <div className="mb-6 rounded-xl overflow-hidden relative h-64">
+                <Image
                   src={project.thumbnail || "/placeholder.svg"}
                   alt={`${project.title} preview`}
-                  className="w-full h-64 object-cover transition-transform duration-300 hover:scale-110"
+                  fill
+                  className="object-cover transition-transform duration-300 hover:scale-110"
                 />
               </div>
               <div className="text-center">

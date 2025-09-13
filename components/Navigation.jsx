@@ -25,7 +25,7 @@ export default function Navigation({ activeSection, scrollToSection }) {
     >
       {/* Cyberpunk Animation Background */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute top-0 left-0 w-full h-full opacity-20">
+        <div className="absolute top-0 left-0 w-full h-full opacity-8">
           <svg className="w-full h-full" viewBox="0 0 1000 100" preserveAspectRatio="none">
             <defs>
               <pattern id="cyber-circuit" x="0" y="0" width="100" height="100" patternUnits="userSpaceOnUse">

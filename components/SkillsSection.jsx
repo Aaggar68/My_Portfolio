@@ -16,12 +16,10 @@ export default function SkillsSection() {
   ]
 
   const certifications = [
-    { name: "TensorFlow Developer Certificate", thumbnail: "/tensorflow-developer-certificate.jpg" },
-    { name: "NVIDIA DLI — Jetson / Deep Learning for Computer Vision", thumbnail: "/nvidia-dli-jetson-certificate.jpg" },
-    { name: "ARM Accredited Engineer — Embedded Systems (AAE)", thumbnail: "/arm-accredited-engineer-certificate.jpg" },
-    { name: "NVIDIA Deep Learning Institute (DLI) Certificate", thumbnail: "/nvidia-dli-certificate.jpg" },
-    { name: "Google Professional Machine Learning Engineer", thumbnail: "/google-ml-engineer-certificate.jpg" },
-    { name: "AWS Certified Machine Learning", thumbnail: "/aws-ml-certificate.jpg" },
+    { name: "SOLIDWORKS CAD Design Associate (CSWA)", thumbnail: "/solidworks-cswa-certificate.jpg", date: "2024" },
+    { name: "NVIDIA DLI — Jetson / Deep Learning for Computer Vision", thumbnail: "/nvidia-dli-jetson-certificate.jpg", date: "2023" },
+    { name: "Google Professional Machine Learning Engineer", thumbnail: "/google-ml-engineer-certificate.jpg", date: "2023" },
+    { name: "AWS Certified Machine Learning", thumbnail: "/aws-ml-certificate.jpg", date: "2024" },
   ]
 
   return (
@@ -83,42 +81,9 @@ export default function SkillsSection() {
 
         <div className="mb-16">
           <h3 className="text-3xl font-bold text-center mb-8" style={{ color: "#ffffff" }}>
-            Certifications & Training
-          </h3>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
-            {certifications.map((cert, index) => (
-              <div
-                key={index}
-                className="relative h-48 rounded-xl transition-all duration-300 hover:scale-105 hover:shadow-2xl overflow-hidden group cursor-pointer"
-                style={{
-                  backgroundImage: `url(${cert.thumbnail || "/placeholder.svg"})`,
-                  backgroundSize: "cover",
-                  backgroundPosition: "center",
-                  backgroundRepeat: "no-repeat",
-                }}
-              >
-                {/* Dark overlay for better text readability */}
-                <div className="absolute inset-0 bg-black/60 group-hover:bg-black/40 transition-all duration-300"></div>
-                
-                {/* Text overlay */}
-                <div className="absolute inset-0 flex items-center justify-center p-4">
-                  <span className="text-base font-semibold leading-relaxed text-center text-white drop-shadow-lg">
-                    {cert.name}
-                  </span>
-                </div>
-                
-                {/* Hover effect border */}
-                <div className="absolute inset-0 border-2 border-transparent group-hover:border-cyan-400/50 rounded-xl transition-all duration-300"></div>
-              </div>
-            ))}
-          </div>
-        </div>
-
-        <div>
-          <h3 className="text-3xl font-bold text-center mb-8" style={{ color: "#ffffff" }}>
             Technical Skills
           </h3>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
+          <div className="flex flex-wrap justify-center gap-4">
             {mainSkills.map((skill, index) => (
               <div
                 key={index}
@@ -135,6 +100,74 @@ export default function SkillsSection() {
                     {skill}
                   </span>
                 </div>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <div>
+          <h3 className="text-3xl font-bold text-center mb-8" style={{ color: "#ffffff" }}>
+            Certifications & Training
+          </h3>
+          <div className="flex flex-wrap justify-center gap-8">
+            {certifications.map((cert, index) => (
+              <div
+                key={index}
+                className="relative w-96 h-48 rounded-xl transition-all duration-300 hover:scale-105 hover:shadow-2xl overflow-hidden group cursor-pointer p-6 flex items-center justify-center"
+                style={{
+                  background: cert.name.includes("AWS") 
+                    ? "rgba(255, 140, 0, 0.1)" 
+                    : "rgba(0, 0, 0, 0.4)",
+                  backdropFilter: "blur(10px)",
+                  border: cert.name.includes("AWS") 
+                    ? "2px solid rgba(255, 140, 0, 0.4)" 
+                    : "2px solid rgba(255, 255, 255, 0.2)",
+                  minWidth: "384px",
+                  maxWidth: "384px",
+                }}
+              >
+                {/* Date label button */}
+                <div className="absolute top-3 right-3 z-10">
+                  <span
+                    className="px-2 py-1 rounded-full text-xs font-semibold border backdrop-blur-sm"
+                    style={{
+                      background: cert.name.includes("AWS") 
+                        ? "rgba(255, 140, 0, 0.2)" 
+                        : "rgba(255, 255, 255, 0.2)",
+                      color: "#ffffff",
+                      borderColor: cert.name.includes("AWS") 
+                        ? "rgba(255, 140, 0, 0.4)" 
+                        : "rgba(255, 255, 255, 0.4)",
+                    }}
+                  >
+                    {cert.date}
+                  </span>
+                </div>
+
+                {/* Text content */}
+                <div className="text-center">
+                  <span className="text-base font-semibold leading-relaxed text-center text-white">
+                    {cert.name}
+                  </span>
+                </div>
+                
+                {/* Hover effect border */}
+                <div 
+                  className="absolute inset-0 border-2 border-transparent rounded-xl transition-all duration-300"
+                  style={{
+                    borderColor: cert.name.includes("AWS") 
+                      ? "transparent" 
+                      : "transparent"
+                  }}
+                ></div>
+                <div 
+                  className="absolute inset-0 border-2 border-transparent group-hover:border-opacity-50 rounded-xl transition-all duration-300"
+                  style={{
+                    borderColor: cert.name.includes("AWS") 
+                      ? "rgba(255, 140, 0, 0.8)" 
+                      : "rgba(6, 182, 212, 0.5)"
+                  }}
+                ></div>
               </div>
             ))}
           </div>

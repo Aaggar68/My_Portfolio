@@ -7,21 +7,29 @@ export const metadata = {
   description: 'Personal portfolio website',
   icons: {
     icon: [
-      { url: '/favicon.ico', sizes: 'any' },
-      { url: '/FavIcon.png', type: 'image/png' }
+      { url: '/FavIcon.png', sizes: 'any' },
+      { url: '/FavIcon.svg', type: 'image/svg+xml' }
     ],
-    shortcut: '/favicon.ico',
-    apple: '/FavIcon.png',
+    shortcut: '/FavIcon.png',
+    apple: '/FavIcon.svg',
   },
+}
+
+export const viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  maximumScale: 5,
+  minimumScale: 0.5,
+  userScalable: true,
 }
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
-        <link rel="icon" href="/FavIcon.png" type="image/png" />
-        <link rel="shortcut icon" href="/FavIcon.png" type="image/png" />
-        <link rel="apple-touch-icon" href="/FavIcon.png" />
+        <link rel="icon" href="/FavIcon.svg" type="image/svg+xml" />
+        <link rel="shortcut icon" href="/FavIcon.svg" type="image/svg+xml" />
+        <link rel="apple-touch-icon" href="/FavIcon.svg" />
       </head>
       <body className={`font-sans ${GeistSans.variable} ${GeistMono.variable}`}>
         {children}

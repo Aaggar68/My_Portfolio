@@ -1,5 +1,7 @@
 "use client"
 
+import Image from "next/image"
+
 export default function AboutSection() {
   return (
     <section
@@ -12,7 +14,7 @@ export default function AboutSection() {
     >
       {/* Cyberpunk Animation Background */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute top-0 left-0 w-full h-full opacity-12">
+        <div className="absolute top-0 left-0 w-full h-full opacity-8">
           <svg className="w-full h-full" viewBox="0 0 1200 800" preserveAspectRatio="none">
             <defs>
               <pattern id="about-cyber" x="0" y="0" width="150" height="150" patternUnits="userSpaceOnUse">
@@ -47,11 +49,11 @@ export default function AboutSection() {
         <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-pink-400 to-transparent animate-pulse"></div>
         <div className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-cyan-400 to-transparent animate-pulse"></div>
       </div>
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="font-bold text-center mb-16 text-6xl" style={{ color: "#ffffff" }}>
+      <div className="max-w-7xl mx-auto responsive-container">
+        <h2 className="font-bold text-center mb-16 responsive-text" style={{ color: "#ffffff", fontSize: 'clamp(2rem, 6vw, 3.75rem)' }}>
         Maker. Mentor. Mess-up Expert
         </h2>
-        <div className="grid lg:grid-cols-2 gap-20 items-start">
+        <div className="responsive-grid lg:grid-cols-2 items-start" style={{gap: 'clamp(2rem, 5vw, 5rem)'}}>
           <div className="space-y-16">
             <div className="space-y-16">
                 <p className="leading-relaxed text-4xl font-bold" style={{ color: "#ffffff" }}>
@@ -73,60 +75,66 @@ export default function AboutSection() {
               {/* Large main image - top center-right */}
               <div className="absolute top-0 left-1/6 w-3/5 h-1/2 rounded-2xl overflow-hidden shadow-2xl hover:shadow-3xl transition-all duration-500 hover:scale-105 hover:rotate-1 z-10 hover:z-50 group">
                 <div className="absolute inset-0 bg-gradient-to-br from-transparent via-transparent to-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                <img
+                <Image
                   src="/GroupSaintPat.jpg"
-                  alt="CAD Design Workspace"
-                  className="h-full object-cover w-full"
+                  alt="Group photo at Saint Patrick's Day"
+                  fill
+                  className="object-cover"
                 />
               </div>
               
               {/* Medium image - top right */}
               <div className="absolute top-0 right-0 w-2/5 h-2/5 rounded-2xl overflow-hidden shadow-2xl hover:shadow-3xl transition-all duration-500 hover:scale-105 hover:-rotate-1 z-20 hover:z-50 group">
                 <div className="absolute inset-0 bg-gradient-to-br from-transparent via-transparent to-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                <img
+                <Image
                   src="/TreeHug.jpg"
-                  alt="AI Neural Network"
-                  className="w-full h-full object-cover"
+                  alt="Tree hugging moment"
+                  fill
+                  className="object-cover"
                 />
               </div>
               
               {/* Medium image - middle right */}
               <div className="absolute top-1/2 right-1/8 w-1/3 h-1/3 rounded-2xl overflow-hidden shadow-2xl hover:shadow-3xl transition-all duration-500 hover:scale-105 hover:rotate-1 z-30 hover:z-50 group">
                 <div className="absolute inset-0 bg-gradient-to-br from-transparent via-transparent to-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                <img 
-                  src="/anufish.jpg" 
-                  alt="Embedded Systems" 
-                  className="w-full h-full object-cover" 
+                <Image 
+                  src="/anufish.jpg"  
+                  alt="Anurag with fish"
+                  fill
+                  className="object-cover" 
                 />
               </div>
               
               {/* Large bottom image - bottom center */}
               <div className="absolute bottom-0 left-1/4 w-1/2 h-2/5 rounded-2xl overflow-hidden shadow-2xl hover:shadow-3xl transition-all duration-500 hover:scale-105 hover:-rotate-1 z-10 hover:z-50 group">
                 <div className="absolute inset-0 bg-gradient-to-br from-transparent via-transparent to-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                <img
+                <Image
                   src="/CaskeSmash.jpg"
-                  alt="Mechatronics Robot"
-                  className="w-full h-full object-cover"
+                  alt="Cake smashing celebration"
+                  fill
+                  className="object-cover"
                 />
               </div>
               
               {/* Medium accent image - bottom right */}
               <div className="absolute bottom-0 right-0 w-2/5 h-1/3 rounded-2xl overflow-hidden shadow-2xl hover:shadow-3xl transition-all duration-500 hover:scale-105 hover:rotate-2 z-40 hover:z-50 group">
                 <div className="absolute inset-0 bg-gradient-to-br from-transparent via-transparent to-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                <img
-                  src="/placeholder-9o46q.png"
-                  alt="CAD Design Detail"
-                  className="w-full h-full object-cover"
+                <Image
+                  src="/TobermoryLakeside.jpg"
+                  alt="Tobermory lakeside view"
+                  fill
+                  className="object-cover"
                 />
               </div>
               
               {/* Additional medium image - middle left */}
               <div className="absolute top-1/3 left-0 w-1/3 h-1/4 rounded-2xl overflow-hidden shadow-2xl hover:shadow-3xl transition-all duration-500 hover:scale-105 hover:-rotate-1 z-25 hover:z-50 group">
                 <div className="absolute inset-0 bg-gradient-to-br from-transparent via-transparent to-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                <img
-                  src="/placeholder-er1g1.png"
-                  alt="AI Detail"
-                  className="w-full h-full object-cover"
+                <Image
+                  src="/GroupBirthday.jpg"
+                  alt="Group birthday celebration"
+                  fill
+                  className="object-cover"
                 />
               </div>
             </div>  

@@ -19,7 +19,7 @@ export default function ExperienceSection() {
     },
     {
       title: "Mechatronics Project Lead",
-      company: "Western University — Engineering Peer Leader",
+      company: "Western University — Engineering Club Advisor",
       period: "2024 – Present",
       description:
         "Led a multidisciplinary team from concept to a lab-ready demo — CAD, PCB, and embedded control. Ran rapid iteration cycles, coordinated testing, and delivered a working prototype for showcase.",
@@ -63,7 +63,7 @@ export default function ExperienceSection() {
     >
       {/* Cyberpunk Animation Background */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute top-0 left-0 w-full h-full opacity-10">
+        <div className="absolute top-0 left-0 w-full h-full opacity-8">
           <svg className="w-full h-full" viewBox="0 0 1200 800" preserveAspectRatio="none">
             <defs>
               <pattern id="experience-cyber" x="0" y="0" width="180" height="180" patternUnits="userSpaceOnUse">
@@ -119,7 +119,7 @@ export default function ExperienceSection() {
               boxShadow: "0 10px 30px rgba(0, 0, 0, 0.3)",
             }}
           >
-            {showTimeline ? "View Cards" : "View Journey"}
+            {showTimeline ? "Display Roles" : "Show Impact"}
           </button>
         </div>
 
