@@ -7,7 +7,7 @@ export default function ContactSection() {
   return (
     <section
       id="contact"
-      className="py-20 px-6 relative overflow-hidden"
+      className="section-container relative overflow-hidden"
       style={{
         background: "linear-gradient(135deg, #475569 0%, #334155 30%, #1e293b 70%, #0f172a 100%)",
         minHeight: "100vh",
@@ -51,19 +51,19 @@ export default function ContactSection() {
         <div className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-pink-400 to-transparent animate-pulse"></div>
       </div>
 
-      <div className="max-w-7xl mx-auto text-center relative z-10 px-4 sm:px-6 lg:px-8 pt-20">
+      <div className="container text-center relative z-10 pt-20">
         <div className="mb-12">
           <div className="flex items-center justify-center gap-3 mb-6">
             <Rocket className="w-8 h-8 text-white animate-bounce" />
-            <h2 className="text-5xl md:text-6xl font-bold text-white text-balance">Let's Collaborate!</h2>
+            <h2 className="responsive-text font-bold text-white text-balance" style={{ fontSize: 'clamp(2rem, 6vw, 3.75rem)' }}>Let's Collaborate!</h2>
             <Lightbulb className="w-8 h-8 text-yellow-300 animate-pulse" />
           </div>
-          <p className="text-xl text-white/90 max-w-2xl mx-auto text-pretty">
+          <p className="responsive-text text-white/90 max-w-2xl mx-auto text-pretty" style={{ fontSize: 'clamp(1rem, 2.5vw, 1.25rem)' }}>
             Your next project deserves creativity and passion
           </p>
         </div>
 
-        <p className="max-w-4xl mx-auto leading-relaxed mb-16 text-lg md:text-xl text-white/95 text-pretty">
+        <p className="max-w-4xl mx-auto leading-relaxed mb-16 responsive-text text-white/95 text-pretty" style={{ fontSize: 'clamp(1rem, 2.5vw, 1.25rem)' }}>
           I turn rough ideas into real, working prototypes — whether that means soldering a PCB, training a tiny model,
           or quickly iterating a CAD part. Got a startup idea, a side-project, or just want to talk hardware + AI over
           coffee? Hit me up — I'd love to help or just swap stories.

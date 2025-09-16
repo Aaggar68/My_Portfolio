@@ -10,7 +10,7 @@ export default function ProjectsSection() {
     {
       title: "Phish Sense – AI Phishing Detection System",
       description:
-        "smart security system that learns phishing patterns through NLP models from data and flags malicious content in real time.",
+        "Smart security system that learns phishing patterns through NLP models from data and flags malicious content in real time.",
       tech: ["PyTorch", "DistilBERT", "FastAPI", "PostgreSQL", "React", "Chrome Extension", "Docker", "CI/CD"],
       thumbnail: "/phish-sense-ai-detection.png",
       github: "https://github.com/Aaggar68/phish-sense",
@@ -69,7 +69,7 @@ export default function ProjectsSection() {
   return (
     <section
       id="projects"
-      className="px-6 py-24 relative"
+      className="section-container relative"
       style={{
         background: "linear-gradient(135deg, #475569 0%, #334155 30%, #1e293b 70%, #0f172a 100%)",
         minHeight: "100vh",
@@ -112,11 +112,11 @@ export default function ProjectsSection() {
         <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-green-400 to-transparent animate-pulse"></div>
         <div className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-pink-400 to-transparent animate-pulse"></div>
       </div>
-      <div className="max-w-7xl mx-auto responsive-container">
-        <h2 className="font-bold text-center mb-6 text-6xl" style={{ color: "#ffffff" }}>
+      <div className="container">
+        <h2 className="font-bold text-center mb-6 responsive-text" style={{ color: "#ffffff", fontSize: 'clamp(2rem, 6vw, 3.75rem)' }}>
           Projects & Pandemonium
         </h2>
-        <p className="text-center mb-12 text-xl leading-relaxed max-w-4xl mx-auto" style={{ color: "#f1f5f9" }}>
+        <p className="text-center mb-12 responsive-text leading-relaxed max-w-4xl mx-auto" style={{ color: "#f1f5f9", fontSize: 'clamp(1rem, 2.5vw, 1.25rem)' }}>
           A messy mix of prototypes, hacks, and demos — code, videos, and the glorious failures that taught me the most.
         </p>
         <div className="flex flex-col items-center gap-8">

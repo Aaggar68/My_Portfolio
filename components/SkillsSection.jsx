@@ -163,7 +163,7 @@ export default function SkillsSection() {
   return (
     <section
       id="skills"
-      className="px-6 py-24 relative"
+      className="section-container relative"
       style={{
         background: "linear-gradient(135deg, #0f172a 0%, #1e293b 30%, #334155 70%, #475569 100%)",
         minHeight: "100vh",
@@ -206,13 +206,13 @@ export default function SkillsSection() {
         <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-pink-400 to-transparent animate-pulse"></div>
         <div className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-cyan-400 to-transparent animate-pulse"></div>
       </div>
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="container">
         {/* Header */}
         <div className="text-center mb-16">
-          <h2 className="font-bold text-6xl mb-6" style={{ color: "#ffffff" }}>
+          <h2 className="font-bold mb-6 responsive-text" style={{ color: "#ffffff", fontSize: 'clamp(2rem, 6vw, 3.75rem)' }}>
             Wiring & Wisdom
           </h2>
-          <p className="text-xl leading-relaxed max-w-4xl mx-auto" style={{ color: "#f1f5f9" }}>
+          <p className="responsive-text leading-relaxed max-w-4xl mx-auto" style={{ color: "#f1f5f9", fontSize: 'clamp(1rem, 2.5vw, 1.25rem)' }}>
             Hardware know-how + software smarts — what I use to turn sketches into things that move, see, and think.
           </p>
         </div>

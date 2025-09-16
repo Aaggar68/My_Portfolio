@@ -27,6 +27,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, minimum-scale=0.5, user-scalable=yes" />
         <link rel="icon" href="/FavIcon.svg" type="image/svg+xml" />
         <link rel="shortcut icon" href="/FavIcon.svg" type="image/svg+xml" />
         <link rel="apple-touch-icon" href="/FavIcon.svg" />

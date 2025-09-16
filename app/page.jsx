@@ -59,7 +59,7 @@ export default function Portfolio() {
 
   return (
     <div
-      className="min-h-screen relative scroll-container zoom-coherent"
+      className="min-h-screen relative scroll-container zoom-coherent zoom-safe"
       style={{
         background: "linear-gradient(135deg, #a855f7 0%, #ec4899 50%, #6366f1 100%)",
         minHeight: "100vh",

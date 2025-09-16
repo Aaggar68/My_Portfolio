@@ -7,7 +7,7 @@ export default function ExperienceSection() {
 
   const experiences = [
     {
-      title: "Mechatronics & AI Intern",
+      title: "Computer Vision & AI-Powered Automation Intern",
       company: "Kissan Engineers (Casting)",
       period: "Summer 2025",
       description:
@@ -41,7 +41,7 @@ export default function ExperienceSection() {
     },
     {
       title: "Embedded Systems Developer (Independent)",
-      company: "Freelance Projects",
+      company: "Freelance Work (Self-Employed)",
       period: "2021 – 2023",
       description:
         "Designed and flashed real-time firmware for motor control, sensors, and safety interlocks. Built compact PCBs and tuned low-latency control loops for reliable hardware performance.",
@@ -55,7 +55,7 @@ export default function ExperienceSection() {
   return (
     <section
       id="experience"
-      className="px-6 py-32 relative"
+      className="section-container relative"
       style={{
         background: "linear-gradient(135deg, #0f172a 0%, #1e293b 30%, #334155 70%, #475569 100%)",
         minHeight: "100vh",
@@ -98,11 +98,11 @@ export default function ExperienceSection() {
         <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-cyan-400 to-transparent animate-pulse"></div>
         <div className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-pink-400 to-transparent animate-pulse"></div>
       </div>
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="font-bold text-center mb-6 text-6xl" style={{ color: "#ffffff" }}>
+      <div className="container">
+        <h2 className="font-bold text-center mb-6 responsive-text" style={{ color: "#ffffff", fontSize: 'clamp(2rem, 6vw, 3.75rem)' }}>
           Roles & Impact — What I built and why it mattered.
         </h2>
-        <p className="text-center mb-12 text-xl leading-relaxed max-w-4xl mx-auto" style={{ color: "#f1f5f9" }}>
+        <p className="text-center mb-12 responsive-text leading-relaxed max-w-4xl mx-auto" style={{ color: "#f1f5f9", fontSize: 'clamp(1rem, 2.5vw, 1.25rem)' }}>
           Real projects — from prototype to demo — that solved real problems, saved time, and taught me how to build smarter.
         </p>
 

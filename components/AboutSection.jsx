@@ -6,7 +6,7 @@ export default function AboutSection() {
   return (
     <section
       id="about"
-      className="px-6 relative py-32"
+      className="section-container relative"
       style={{
         background: "linear-gradient(135deg, #475569 0%, #334155 30%, #1e293b 70%, #0f172a 100%)",
         minHeight: "100vh",
@@ -49,29 +49,29 @@ export default function AboutSection() {
         <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-pink-400 to-transparent animate-pulse"></div>
         <div className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-cyan-400 to-transparent animate-pulse"></div>
       </div>
-      <div className="max-w-7xl mx-auto responsive-container">
+      <div className="container">
         <h2 className="font-bold text-center mb-16 responsive-text" style={{ color: "#ffffff", fontSize: 'clamp(2rem, 6vw, 3.75rem)' }}>
         Maker. Mentor. Mess-up Expert
         </h2>
         <div className="responsive-grid lg:grid-cols-2 items-start" style={{gap: 'clamp(2rem, 5vw, 5rem)'}}>
           <div className="space-y-16">
             <div className="space-y-16">
-                <p className="leading-relaxed text-4xl font-bold" style={{ color: "#ffffff" }}>
+                <p className="leading-relaxed font-bold responsive-text" style={{ color: "#ffffff", fontSize: 'clamp(1.5rem, 4vw, 2.5rem)' }}>
                   Hi — I'm Anurag. Curious maker, coffee-lover, and someone who prefers figuring things out with my hands (and a little chaos).
                 </p>
                 
-                <p className="leading-relaxed text-3xl" style={{ color: "#f1f5f9" }}>
+                <p className="leading-relaxed responsive-text" style={{ color: "#f1f5f9", fontSize: 'clamp(1.125rem, 3vw, 1.875rem)' }}>
                   I love turning rough sketches into working prototypes, running beginner-friendly workshops, and helping friends debug — the messy, hands-on part is my favorite. Outside the lab I recharge with good coffee, a quick workout, and decent sleep — it keeps me curious and calm.
                 </p>
                 
-                <p className="leading-relaxed text-3xl" style={{ color: "#f1f5f9" }}>
+                <p className="leading-relaxed responsive-text" style={{ color: "#f1f5f9", fontSize: 'clamp(1.125rem, 3vw, 1.875rem)' }}>
                   Got a weird idea or want to trade failure stories over coffee? I'm in.
                 </p>
             </div>
           </div>
           <div className="relative">
             {/* Modern Collage Layout - Larger Thumbnails */}
-            <div className="relative w-full h-[800px] lg:h-[900px] ml-4">
+            <div className="relative w-full h-[clamp(600px,80vh,900px)] ml-4">
               {/* Large main image - top center-right */}
               <div className="absolute top-0 left-0 w-2/3 h-3/5 rounded-2xl overflow-hidden shadow-2xl hover:shadow-3xl transition-all duration-500 hover:scale-105 hover:rotate-1 z-10 hover:z-50 group">
                 <div className="absolute inset-0 bg-gradient-to-br from-transparent via-transparent to-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>

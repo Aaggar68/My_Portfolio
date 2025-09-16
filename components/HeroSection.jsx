@@ -6,7 +6,7 @@ import { Button } from "@/components/ui/button"
 export default function HeroSection({ scrollToSection }) {
   return (
     <section
-      className="px-6 flex-col items-center relative pb-0 pt-64"
+      className="section-container flex-col items-center relative pb-0 pt-64"
       style={{
         background: "linear-gradient(135deg, #0f172a 0%, #1e293b 30%, #334155 70%, #475569 100%)",
         minHeight: "100vh",
@@ -65,7 +65,7 @@ export default function HeroSection({ scrollToSection }) {
         }
       `}</style>
 
-      <div className="max-w-7xl mx-auto text-center relative z-10 responsive-container">
+      <div className="container text-center relative z-10">
         <div className="mb-6">
           <div className="relative mx-auto mb-6 w-[min(300px,80vw)] h-[min(300px,80vw)]">
             <Image
