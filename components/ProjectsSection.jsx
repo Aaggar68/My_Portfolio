@@ -32,7 +32,7 @@ export default function ProjectsSection() {
       tech: ["Python", "AI + Financial Analysis", "DevOps", "Data Analysis"],
       thumbnail: "/stock-analyzer-dashboard.jpg",
       github: "https://github.com/ShaimaaAliECE/group-project-group_24-wall_street.git",
-      timeSpan: "Mar 2024 - Apr 2024",
+      timeSpan: "Jan 2024 - Jan 2024",
     },
     {
       title: "BLDC Motor Controller (FOC)",
