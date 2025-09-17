@@ -18,14 +18,15 @@ export default function ExperienceSection() {
       ]
     },
     {
-      title: "Mechatronics Project Lead",
-      company: "Western University — Engineering Club Advisor",
-      period: "2024 – Present",
+      title: "CNC Machinist",
+      company: "Aline Precision Tool Limited",
+      period: "2023 – 2024",
       description:
-        "Led a multidisciplinary team from concept to a lab-ready demo — CAD, PCB, and embedded control. Ran rapid iteration cycles, coordinated testing, and delivered a working prototype for showcase.",
+        "Machined aerospace-grade alloys to tight tolerances using advanced CNC equipment. Generated optimized toolpaths and collaborated with engineers to improve manufacturability through DFM feedback.",
       timelineDescription: [
-        "Delivered a lab-ready prototype used in department demos; streamlined team workflow and sped up iteration cycles.",
-        "Designed the full system architecture: parametric CAD → KiCad PCB with proper BOM, ROS-enabled perception & control nodes, sensor-fusion (IMU + odometry), and on-device model inference for closed-loop behavior."
+        "Machined aerospace-grade alloys (e.g., 6061-T6 aluminum, 4140 steel, Inconel) to tolerances within ±0.0005–0.001\" using appropriate spindle speeds, feeds, and coolant strategies.",
+        "Generated and optimized toolpaths in Mastercam (2D contouring, pocketing, drilling, and lathe cycles), balancing cycle time reduction with surface finish requirements.",
+        "Collaborated with engineers to provide DFM (Design for Manufacturability) feedback, suggesting tolerance adjustments and machining strategies to improve manufacturability."
       ]
     },
      {
