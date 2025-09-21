@@ -147,11 +147,19 @@ export default function ExperienceSection() {
 
                   {/* Timeline content */}
                   <div
-                    className="ml-20 rounded-xl p-8 shadow-lg border transform transition-all duration-300 hover:scale-105"
+                    className="ml-20 rounded-xl p-8 shadow-lg border transform transition-all duration-300"
                     style={{
                       background: "rgba(0, 0, 0, 0.6)",
                       backdropFilter: "blur(10px)",
                       borderColor: "rgba(255, 255, 255, 0.2)",
+                    }}
+                    onMouseEnter={(e) => {
+                      e.currentTarget.style.transform = "translateY(-2px)"
+                      e.currentTarget.style.boxShadow = "0 20px 40px rgba(0, 0, 0, 0.3)"
+                    }}
+                    onMouseLeave={(e) => {
+                      e.currentTarget.style.transform = "translateY(0)"
+                      e.currentTarget.style.boxShadow = "0 4px 6px rgba(0, 0, 0, 0.1)"
                     }}
                   >
                     <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
@@ -193,7 +201,7 @@ export default function ExperienceSection() {
             {experiences.map((job, index) => (
               <div
                 key={index}
-                className="rounded-xl p-8 shadow-lg border transition-all duration-300 cursor-pointer hover:scale-105 w-full max-w-sm"
+                className="rounded-xl p-8 shadow-lg border transition-all duration-300 cursor-pointer w-full max-w-sm"
                 style={{
                   background: "rgba(0, 0, 0, 0.4)",
                   backdropFilter: "blur(10px)",
@@ -201,9 +209,13 @@ export default function ExperienceSection() {
                 }}
                 onMouseEnter={(e) => {
                   e.currentTarget.style.background = "rgba(0, 0, 0, 0.5)"
+                  e.currentTarget.style.transform = "translateY(-2px)"
+                  e.currentTarget.style.boxShadow = "0 20px 40px rgba(0, 0, 0, 0.3)"
                 }}
                 onMouseLeave={(e) => {
                   e.currentTarget.style.background = "rgba(0, 0, 0, 0.4)"
+                  e.currentTarget.style.transform = "translateY(0)"
+                  e.currentTarget.style.boxShadow = "0 4px 6px rgba(0, 0, 0, 0.1)"
                 }}
               >
                 <div className="text-center mb-6">
@@ -236,7 +248,7 @@ export default function ExperienceSection() {
       <div className="flex justify-center mt-16 mb-8">
         <button
           onClick={() => window.scrollTo({ top: document.getElementById("projects").offsetTop, behavior: "smooth" })}
-          className="text-white hover:text-yellow-300 transition-all duration-300 animate-bounce hover:scale-110 p-3 rounded-full backdrop-blur-sm"
+          className="text-white hover:text-yellow-300 transition-all duration-300 animate-bounce p-3 rounded-full backdrop-blur-sm"
           style={{ 
             color: "#ffffff",
             background: "rgba(255, 255, 255, 0.1)",
