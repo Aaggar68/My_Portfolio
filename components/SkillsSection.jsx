@@ -225,11 +225,19 @@ export default function SkillsSection() {
             {mainSkills.map((skill, index) => (
               <div
                 key={index}
-                className="p-4 rounded-lg transition-all duration-300 hover:scale-105"
+                className="p-4 rounded-lg transition-all duration-300"
                 style={{
                   background: skill.colors.background,
                   backdropFilter: "blur(10px)",
                   border: `1px solid ${skill.colors.border}`,
+                }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.transform = "translateY(-2px)"
+                  e.currentTarget.style.boxShadow = "0 8px 25px rgba(0, 0, 0, 0.2)"
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.transform = "translateY(0)"
+                  e.currentTarget.style.boxShadow = "none"
                 }}
               >
                 <div className="flex items-center space-x-3">
@@ -251,7 +259,7 @@ export default function SkillsSection() {
             {certifications.map((cert, index) => (
               <div
                 key={index}
-                className="relative w-96 h-48 rounded-xl transition-all duration-300 hover:scale-105 hover:shadow-2xl overflow-hidden group cursor-pointer p-6 flex items-center justify-center"
+                className="relative w-96 h-48 rounded-xl transition-all duration-300 overflow-hidden group cursor-pointer p-6 flex items-center justify-center"
                 style={{
                   background: cert.colors.background,
                   backdropFilter: "blur(10px)",
@@ -263,6 +271,14 @@ export default function SkillsSection() {
                   if (cert.verificationLink) {
                     window.open(cert.verificationLink, '_blank', 'noopener,noreferrer');
                   }
+                }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.transform = "translateY(-4px)"
+                  e.currentTarget.style.boxShadow = "0 20px 40px rgba(0, 0, 0, 0.3)"
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.transform = "translateY(0)"
+                  e.currentTarget.style.boxShadow = "none"
                 }}
               >
                 {/* Date label button */}
@@ -312,7 +328,7 @@ export default function SkillsSection() {
       <div className="flex justify-center mt-16 mb-8">
         <button
           onClick={() => window.scrollTo({ top: document.getElementById("contact").offsetTop, behavior: "smooth" })}
-          className="text-white hover:text-blue-400 transition-all duration-300 animate-bounce hover:scale-110 p-3 rounded-full backdrop-blur-sm"
+          className="text-white hover:text-blue-400 transition-all duration-300 animate-bounce p-3 rounded-full backdrop-blur-sm"
           style={{ 
             color: "#ffffff",
             background: "rgba(255, 255, 255, 0.1)",
