@@ -32,7 +32,7 @@ export default function ProjectsSection() {
         "Data-driven trading insights Python tool that ingests historical & real-time market data, computes financial advice for stock and crypto trading and giving insights on the stocks to buy and sell.",
       tech: ["Python", "AI + Financial Analysis", "DevOps", "Data Analysis"],
       thumbnail: "/stock-analyzer-dashboard.jpg",
-      github: "https://github.com/ShaimaaAliECE/group-project-group_24-wall_street.git",
+      github: "https://github.com/Aaggar68/Stock_Analyser.git",
       timeSpan: "Jan 2025 - Apr 2025",
     },
     {
